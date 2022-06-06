@@ -1,0 +1,40 @@
+.container {
+  background-color: #63a1bc;
+  padding: 30px 60px 50px 60px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.title__singleInputs {
+  font-family: 'Cookie', cursive;
+  margin: 0;
+  color: white;
+  font-size: 70px;
+  font-weight: lighter;
+  text-shadow: 2px 2px #5791ab;
+  padding-bottom: 20px;
+}
+
+.box {
+  background-color: orange;
+  padding: 20px;
+}
+
+.result__row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__color {
+  background-color: orange;
+  padding: 20px;
+  width: 410px;
+}
+
+.cube {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+}
