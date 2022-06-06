@@ -2,17 +2,7 @@
   <div class="container">
     <h1 class="title__singleInputs">{{ firstCharUpper(titleOne) }}</h1>
     <div class="box">
-      <form class="form__singleInput" @submit.prevent="changeTitleOne()">
-        <input
-          class="input__singleInput"
-          type="text"
-          v-model="inputValueOne"
-          placeholder="Update title..."
-          autofocus
-          required="required"
-        />
-        <button class="button">Change</button>
-      </form>
+      <Form1 @changeTitleOne="changeTitleOne" />
     </div>
   </div>
 </template>
@@ -23,9 +13,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Form1 from "../components/Form1.vue";
 
 export default defineComponent({
   name: "TaskOne",
+  components: {
+    Form1,
+  },
   data: () => ({
     inputValueOne: "",
     titleOne: "Title",
@@ -34,9 +28,8 @@ export default defineComponent({
     firstCharUpper(str: string) {
       return str.charAt(0).toUpperCase() + str.slice(1);
     },
-    changeTitleOne() {
-      this.titleOne = this.inputValueOne;
-      this.inputValueOne = "";
+    changeTitleOne(title: string) {
+      this.titleOne = title;
     },
   },
 });
